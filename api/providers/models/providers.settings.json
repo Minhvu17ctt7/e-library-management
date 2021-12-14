@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "providers",
+  "info": {
+    "name": "Providers"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "integer"
+    },
+    "note": {
+      "type": "text"
+    },
+    "books": {
+      "via": "provider",
+      "collection": "books"
+    }
+  }
+}

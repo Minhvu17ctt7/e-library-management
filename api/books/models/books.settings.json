@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "name": "Books",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "page": {
+      "type": "integer",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "float",
+      "required": true
+    },
+    "remain": {
+      "type": "integer",
+      "required": true
+    },
+    "author": {
+      "model": "authors",
+      "via": "books"
+    },
+    "provider": {
+      "model": "providers",
+      "via": "books"
+    },
+    "category": {
+      "model": "categories",
+      "via": "books"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "transaction_details": {
+      "via": "book",
+      "collection": "transaction-detail"
+    }
+  }
+}

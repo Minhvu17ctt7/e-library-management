@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "name": "Transaction"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quantity": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "integer"
+    },
+    "member": {
+      "model": "member",
+      "via": "transactions"
+    },
+    "transaction_details": {
+      "via": "transaction",
+      "collection": "transaction-detail"
+    }
+  }
+}

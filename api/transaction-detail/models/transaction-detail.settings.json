@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transaction_details",
+  "info": {
+    "name": "Transaction_detail",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quantity": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "transaction": {
+      "model": "transaction",
+      "via": "transaction_details"
+    },
+    "book": {
+      "via": "transaction_details",
+      "model": "books"
+    }
+  }
+}
