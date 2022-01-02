@@ -31,6 +31,9 @@
     },
     "pay_date": {
       "type": "date"
+    },
+    "appointment_date": {
+      "type": "date"
     }
   }
 }
