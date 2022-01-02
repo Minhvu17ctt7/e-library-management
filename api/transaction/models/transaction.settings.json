@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "transactions",
   "info": {
-    "name": "Transaction"
+    "name": "Transaction",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -24,6 +25,12 @@
     "transaction_details": {
       "via": "transaction",
       "collection": "transaction-detail"
+    },
+    "borrow_date": {
+      "type": "date"
+    },
+    "pay_date": {
+      "type": "date"
     }
   }
 }

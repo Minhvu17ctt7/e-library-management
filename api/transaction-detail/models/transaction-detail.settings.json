@@ -18,8 +18,8 @@
       "default": 1
     },
     "transaction": {
-      "model": "transaction",
-      "via": "transaction_details"
+      "via": "transaction_details",
+      "model": "transaction"
     },
     "book": {
       "via": "transaction_details",
