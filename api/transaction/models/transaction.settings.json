@@ -12,19 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "quantity": {
-      "type": "integer"
-    },
-    "type": {
-      "type": "integer"
-    },
     "member": {
       "model": "member",
       "via": "transactions"
     },
-    "transaction_details": {
-      "via": "transaction",
-      "collection": "transaction-detail"
+    "transaction_detail": {
+      "model": "transaction_details",
+      "via": "transactions"
     },
     "borrow_date": {
       "type": "date"
